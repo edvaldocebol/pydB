@@ -1,0 +1,81 @@
+import time
+
+def maquina_de_escrever(texto):
+    for letra in texto:
+        print(letra, end='', flush=True)  # Imprime a letra sem quebra de linha e faz flush do buffer
+        time.sleep(0.1)  # Pausa por 0.1 segundos (ajuste conforme necessário)
+    print()  # Imprime uma quebra de linha no final para finalizar a linha
+
+texto_a_digitar = "Olá, esta é uma máquina de escrever em Python!"
+maquina_de_escrever(texto_a_digitar)
+
+=================================================================================================
+import time
+import os
+
+while True:
+    os.system('clear')  # Limpa a tela no Linux/macOS (substitua por 'cls' no Windows)
+    print("A", end="", flush=True)  # Imprime a letra "A" sem quebrar linha e força a saída
+    time.sleep(0.5)  # Aguarda 0,5 segundos
+    os.system('clear')  # Limpa a tela novamente
+    time.sleep(0.5)  # Aguarda mais 0,5 segundos
+
+=================================================================================================
+import curses
+import time
+
+def main(stdscr):
+    # Configura o cursor invisível
+    curses.curs_set(0)
+    
+    while True:
+        stdscr.addch(0, 0, ord('X'), curses.A_BOLD)  # Exibe o caractere 'X' em negrito
+        stdscr.refresh()
+        time.sleep(0.5)  # Pausa por 0,5 segundos
+        
+        stdscr.addch(0, 0, ' ')  # Substitui o caractere por um espaço em branco
+        stdscr.refresh()
+        time.sleep(0.5)  # Pausa por 0,5 segundos
+
+if __name__ == "__main__":
+    curses.wrapper(main)
+
+
+=================================================================================================
+
+import time
+
+def cursor_piscando():
+    while True:
+        print("Texto aqui", end="\r")  # O argumento end="\r" substitui a linha atual
+        time.sleep(0.5)  # Ajuste o tempo de piscar aqui (em segundos)
+        print(" " * len("Texto aqui"), end="\r")  # Apaga o texto
+        time.sleep(0.5)  # Ajuste o tempo de piscar aqui (em segundos)
+
+if __name__ == "__main__":
+    cursor_piscando()
+
+
+================================================================================================
+
+  ██████╗██╗   ██╗███████╗███████╗██╗    ██╗
+ ██╔════╝██║   ██║██╔════╝██╔════╝██║    ██║
+ ██║     ██║   ██║███████╗██████╗ ██║ █╗ ██║
+ ██║     ██║   ██║╚════██║██╔══██╗██║███╗██║
+ ╚██████╗╚██████╔╝███████║██████╔╝╚███╔███╔╝
+  ╚═════╝ ╚═════╝ ╚══════╝╚═════╝  ╚══╝╚══╝
+
+=================================================================================================
+
+  ██▓█   ████   ▄████▄   ▒█████   ██▀███   ▄▄▄     ▄▄▄█████▓
+  ▓██▒██  ▓██▒  ▒██▀ ▀█  ▒██▒  ██▒▓██ ▒ ██▒█████▄  ▓  ██▒ ▓▒
+  ▒██▒▐██▌▒██▒  ▒▓█    ▄ ▒██░  ██▒▓██ ░▄█ ▒██▒ ▄██ ▒ ▓██░ ▒░
+  ░██░▒██▓░██░  ▒▓▓▄ ▄██▒▒██   ██░▒██▀▀█▄  ▒██░█▀   ▒ ▓██▓ ░
+  ░██░▒██▓░██░  ▒ ▓███▀ ░░ ████▓▒░░██▓ ▒██▒░▓█  ▀█▓  ░▒██▒ ░
+  ░▓  ▒▒▓▒░▓    ░ ░▒ ▒  ░░ ▒░▒░▒░░ ▒▓ ░▒▓░░▒▓███▀▒  ░▒▓▒ ░
+   ▒ ░░▒ ░▒▒    ░ ░  ▒     ░ ▒ ▒░  ░▒ ░ ▒░▒░▒   ░  ░░▒  ░
+   ▒ ░░░  ░░ ▒   ░        ░ ░ ░ ▒   ░░   ░ ░    ░   ░  ░
+   ░  ░  ░   ░   ░ ░          ░ ░    ░     ░          ░
+
+
+
