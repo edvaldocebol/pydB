@@ -1,15 +1,14 @@
 from function import functions as fun
 from varConst import varConst as V
 import colorama as color
-import time
+import teste
 
 
 fun.loading()
 
-
 def menuIni():
+    
     fun.limpaC()
-
     fun.logo(color.Fore.RED+'██▓█   ████   ▄████▄   ▒█████   ██▀███   ▄▄▄     ▄▄▄█████▓')
     fun.logo('▓██▒██  ▓██▒  ▒██▀ ▀█  ▒██▒  ██▒▓██ ▒ ██▒█████▄  ▓  ██▒ ▓▒')
     fun.logo('▒██▒▐██▌▒██▒  ▒▓█    ▄ ▒██░  ██▒▓██ ░▄█ ▒██▒ ▄██ ▒ ▓██░ ▒░')
@@ -29,9 +28,10 @@ def menuIni():
     if op =='2':
         fun.limpaC()
         MenuP()
+print()
+
 
 def MenuP():
-
    fun.logo(color.Fore.GREEN+'███████╗██╗   ██╗███████╗███████╗██╗    ██╗')
    fun.logo('██╔════╝██║   ██║██╔════╝██╔════╝██║    ██║')
    fun.logo('██║     ██║   ██║███████╗██████╗ ██║ █╗ ██║')
@@ -53,13 +53,15 @@ def MenuP():
    if opcao == '1':
       menuIni()
    elif opcao == '2':
-      print('OLA')
+      teste.ola()
    elif opcao == '3':
       fun.maquina_de_escrever(color.Fore.WHITE+V.cop)
       fun.maquina_de_escrever(V.insta)
    elif opcao == '4':
       fun.maquina_de_escrever(V.adeus)
-
 MenuP()
+
+def te():
+   print('loco!')
 
 
